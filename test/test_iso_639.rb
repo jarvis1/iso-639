@@ -51,6 +51,12 @@ describe ISO_639 do
     end
   end
 
+  it 'should return the first part of english name' do
+    @entry = ISO_639.find('es')
+    assert @entry.respond_to?(:first_english_name)
+    assert_equal 'Spanish', @entry.first_english_name
+  end
+
   it 'should return single record array by searching a unique code' do
     assert_equal(
       [['spa', '', 'es', 'Spanish; Castilian', 'espagnol; castillan']],

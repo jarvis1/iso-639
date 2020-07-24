@@ -124,6 +124,11 @@ class ISO_639 < Array
     self[3]
   end
 
+  # The entry's first part of english name.
+  def first_english_name
+    self[3].split(';').first
+  end
+
   # The entry's french name.
   def french_name
     self[4]
