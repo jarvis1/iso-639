@@ -59,14 +59,14 @@ describe ISO_639 do
 
   it 'should return single record array by searching a unique code' do
     assert_equal(
-      [['spa', '', 'es', 'Spanish; Castilian', 'espagnol; castillan']],
+      [['spa', '', 'es', 'Spanish', 'espagnol; castillan']],
       ISO_639.search('es')
     )
   end
 
   it 'should return single record array by searching a unique term' do
     assert_equal(
-      [['spa', '', 'es', 'Spanish; Castilian', 'espagnol; castillan']],
+      [['spa', '', 'es', 'Spanish', 'espagnol; castillan']],
       ISO_639.search('spanish')
     )
   end
